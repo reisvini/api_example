@@ -7,7 +7,6 @@ class GetCharactersUseCase {
   GetCharactersUseCase({required this.repository});
 
   Future<List<CharacterViewData>> execute() async {
-    await Future.delayed(Duration(seconds: 2));
     final response = await repository.getAllCharacters();
 
     return response.toViewData();
